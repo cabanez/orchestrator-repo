@@ -1,0 +1,6 @@
+[submodule "roster-service"]
+	path = roster-service
+	url = https://github.com/cabanez/roster-service.git
+[submodule "tactical-optimization-service"]
+	path = tactical-optimization-service
+	url = https://github.com/cabanez/tactical-optimization-service.git

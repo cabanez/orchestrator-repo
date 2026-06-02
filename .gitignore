@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+venv/
+ENV/
+
+# Node
+node_modules/
+
+# Docker
+**/.dockerignore
+**/docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local IDE
+.vscode/
