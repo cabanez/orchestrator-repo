@@ -29,6 +29,21 @@ services:
     networks:
       - roster-network
 
+  tactical-optimization:
+    build:
+      context: ./tactical-optimization-service/src
+      dockerfile: Dockerfile
+    container_name: tactical-optimization
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+    volumes:
+      - ./tactical-optimization-service/src:/app
+    networks:
+      - roster-network
+
 networks:
   roster-network:
     driver: bridge
