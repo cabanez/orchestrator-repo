@@ -8,8 +8,10 @@ services:
       - "5173:5173"
     environment:
       - VITE_API_URL=http://localhost:5000
+      - VITE_TAC_OP_API_URL=http://localhost:8000
     depends_on:
       - server
+      - tactical-optimization
     networks:
       - roster-network
 
@@ -39,8 +41,11 @@ services:
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py
+      - ROSTER_SERVICE_URL=http://server:5000
     volumes:
       - ./tactical-optimization-service/src:/app
+    depends_on:
+      - server
     networks:
       - roster-network
 
